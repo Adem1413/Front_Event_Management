@@ -1,0 +1,28 @@
+<h2>Pack List</h2>
+<table class="table"  >
+
+<thead>
+<tr>
+    <th>Nom d'Entreprise</th>
+    <th>Pack</th>
+    <th>Montant</th>
+    
+</tr>
+
+</thead>
+<tbody>
+    <tr *ngFor="let pack of packs" >
+        <td>{{pack.nom}}</td>
+        <td>{{pack.packtype}}</td>
+        <td>{{pack.montant}}</td>
+      
+        <td>
+        <button class="btn btn-success" (click)="updatePack(pack.id)">Update Pack</button></td>
+        <td><button class="btn btn-danger" (click)="deletePack(pack.id)">Delete Pack</button></td>
+    
+    </tr>
+</tbody>
+
+</table>
+<button style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" class="btn btn-primary" (click)="goToAddPack()" routerLink="create-entreprise" >Add Pack</button>
+

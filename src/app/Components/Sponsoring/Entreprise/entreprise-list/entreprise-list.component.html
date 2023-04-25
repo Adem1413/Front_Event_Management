@@ -1,0 +1,30 @@
+<h2>Entreprise List</h2>
+<table class="table"  >
+
+<thead>
+<tr>
+    <th>Nom</th>
+    <th>Domaine</th>
+    <th>Numero Telephone</th>
+    <th>Email</th>
+    <th>Confirmation</th>
+</tr>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let entreprise of entreprises" >
+        <td>{{entreprise.nom}}</td>
+        <td>{{entreprise.domaine}}</td>
+        <td>{{entreprise.email}}</td>
+        <td>{{entreprise.numtel}}</td>
+        <td>{{entreprise.confirmation}}</td>
+        <td>
+        <button class="btn btn-success" (click)="updateEntreprise(entreprise.id)">Update Entreprise</button></td>
+        <td><button class="btn btn-danger" (click)="deleteEntreprise(entreprise.id)">Delete Entreprise</button></td>
+    
+    </tr>
+</tbody>
+
+</table>
+<button style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" class="btn btn-primary" (click)="goToAddEntreprise()" routerLink="create-entreprise" >Add Entreprise</button>

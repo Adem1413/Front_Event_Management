@@ -1,0 +1,12 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin-top: 150px;
+}
+li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 25px;
+  }

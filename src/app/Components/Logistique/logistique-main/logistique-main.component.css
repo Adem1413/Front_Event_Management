@@ -1,0 +1,13 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    gap:100px;
+   align-items: center;
+   justify-content: center;
+margin-top: 160px;
+}
+li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 25px;
+  }

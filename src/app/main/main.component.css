@@ -1,0 +1,60 @@
+.nav{
+    width: 100%;
+}
+.navbar{
+width: 100%;
+}
+.navElement{
+   color: white;
+    margin-left: 100px;
+column-gap: 50px;}
+
+.navbar-nav{
+    margin-left: 90px;
+column-gap: 50px;
+font-size: large;
+color: white;
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    margin-left: 270px;
+    width: 300px ;
+  }
+.carousell{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.caption{
+    font-weight: 500;
+}
+.logos{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    position: relative;
+    left: 50px;
+    top:50px;
+}
+.logo1{
+    position: relative;
+    bottom: 10px;
+}
+.logo2{
+    margin-left: 300px;
+  position: relative;
+  bottom: 30px;
+}
+.logo-title{
+position: relative;
+top: 10px;
+left: 150px;
+}
+.back{
+    background-image: url("../../assets/bg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

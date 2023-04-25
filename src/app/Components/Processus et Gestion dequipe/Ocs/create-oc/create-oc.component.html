@@ -1,0 +1,31 @@
+<h3>Create Oc</h3>
+<form class="form"  (ngSubmit)="onSubmit()">
+
+    <div class="mb-3" >
+        <label class="form-label">First Name</label>
+        <input class="form-control" type="text" id="FirstName" [(ngModel)]="oc.nom" name="FirstName" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label">LastName</label>
+        <input class="form-control" type="text" id="LastName" [(ngModel)]="oc.prenom" name="LastName" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label">Niveau</label>
+        <input class="form-control" type="text" id="niveau" [(ngModel)]="oc.niveau" name="niveau" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label">Specialite</label>
+        <input class="form-control" type="text" id="specialite" [(ngModel)]="oc.specialite" name="specialite" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label">Numero Telephone</label>
+        <input class="form-control" type="number" id="numtel" [(ngModel)]="oc.numtel" name="numtel" >
+    </div>
+
+   
+    <button class="btn btn-primary" type="submit" >Create Oc</button>
+</form>

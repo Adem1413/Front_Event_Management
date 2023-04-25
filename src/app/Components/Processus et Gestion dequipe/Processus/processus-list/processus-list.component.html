@@ -1,0 +1,41 @@
+<h2>Processus List</h2>
+<table class="table" >
+
+<thead>
+<tr>
+    <th>Nom</th>
+ 
+    <th>BesoinOc</th>
+    <th>Besoin Logistique</th>
+    <th>Duree Par Jour</th>
+    <th>Debut</th>
+    <th>Fin</th>
+    <th>Finalité</th>  
+</tr>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let processus of processuss" >
+        <td>{{processus.nom}}</td>
+           
+        <td>{{processus.besoinOC}}</td>
+        <td>{{processus.besoinlog}}</td>
+        <td>{{processus.dureeJ}}</td>
+        <td>{{processus.debut}}</td>
+        <td>{{processus.fin}}</td>
+        <td>{{processus.finalite}}</td>
+       
+            <td><button class="btn btn-success"  (click)="updateProcessus(processus.id)">Update Processus</button></td>
+            <td>
+        <button class="btn btn-danger" (click)="deleteProcessus(processus.id)">Delete Processus</button>
+    </td>
+    </tr>
+</tbody>
+
+</table>
+
+<button class="btn btn-primary" style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" class="btn btn-primary" (click)="goToAddProcessus()" routerLink="create-processus">Add Processus</button>
+
+
+

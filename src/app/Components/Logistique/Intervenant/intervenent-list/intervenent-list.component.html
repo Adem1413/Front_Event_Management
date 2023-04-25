@@ -1,0 +1,44 @@
+<h2>Intervenant List</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Sujet</th>
+      <th>Email</th>
+      <th>numero telephone</th>
+      <th>Confirmation</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let intervenant of intervenants">
+      <td>{{ intervenant.nom }}</td>
+      <td>{{ intervenant.prenom }}</td>
+      <td>{{ intervenant.sujet }}</td>
+      <td>{{ intervenant.email }}</td>
+      <td>{{ intervenant.numtel }}</td>
+      <td>{{ intervenant.confirmation }}</td>
+      <td>
+        <button
+          class="btn btn-success"
+          (click)="updateIntervenant(intervenant.id)"
+        >
+          Update Intervenant
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-danger"
+          (click)="deleteIntervenant(intervenant.id)"
+        >
+          Delete Intervenant
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" class="btn btn-primary" routerLink="create-intervenant" (click)="goToAddIntervenant()">
+  Add Intervenant
+</button>

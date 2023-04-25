@@ -1,0 +1,26 @@
+<h3>Create Subvention</h3>
+<form class="form"  (ngSubmit)="onSubmit()">
+
+    <div class="mb-3" >
+        <label class="form-label" >Article</label>
+        <input class="form-control" type="text" id="Article" [(ngModel)]="subvention.article" name="Article" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Société</label>
+        <input class="form-control" type="text" id="societe" [(ngModel)]="subvention.societe" name="societe" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Email</label>
+        <input class="form-control" type="email" id="email" [(ngModel)]="subvention.email" name="email" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Numero Telephone</label>
+        <input class="form-control" type="number" id="numtel" [(ngModel)]="subvention.numtel" name="numtel" >
+    </div>
+
+    
+    <button  class="btn btn-primary" type="submit">Create Subvention</button>
+</form>

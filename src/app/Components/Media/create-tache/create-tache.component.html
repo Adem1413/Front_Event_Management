@@ -1,0 +1,16 @@
+<h3>Create Tache</h3>
+<form class="form" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label class="form-label">Tache</label>
+        <input  class="form-control" type="text" id="tache" [(ngModel)]="tache.tache" name="tache" >
+    </div>
+
+    <div>
+        <label class="form-label">Nom Oc</label>
+        <input  class="form-control" type="text" id="ocnom" [(ngModel)]="tache.nomOc" name="ocnom" >
+    </div>
+
+    
+    <button style="margin-top: 20px;" class="btn btn-primary" type="submit">Create Tache</button>
+</form>

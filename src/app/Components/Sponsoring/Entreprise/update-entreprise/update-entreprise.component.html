@@ -1,0 +1,29 @@
+<h3>Update entreprise</h3>
+<form class="form"  (ngSubmit)="onSubmit()">
+
+    <div class="mb-3" >
+        <label class="form-label" >Nom</label>
+        <input class="form-control" type="text" id="name" [(ngModel)]="entreprise.nom" name="name" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Domaine</label>
+        <input class="form-control" type="text" id="domaine" [(ngModel)]="entreprise.domaine" name="domaine" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Numero Telephone</label>
+        <input class="form-control" type="number" id="numtel" [(ngModel)]="entreprise.numtel" name="numtel" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Email</label>
+        <input class="form-control" type="email" id="email" [(ngModel)]="entreprise.email" name="email" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Confirmation</label>
+        <input  type="checkbox" id="confirmation" [(ngModel)]="entreprise.confirmation" name="confirmation" >
+    </div>
+    <button  class="btn btn-primary" type="submit">Update Entreprise</button>
+</form>

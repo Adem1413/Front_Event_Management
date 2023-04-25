@@ -1,0 +1,34 @@
+<h3>Update Intervenant</h3>
+<form  class="form"  (ngSubmit)="onSubmit()">
+
+    <div class="mb-3" >
+        <label class="form-label" >First Name</label>
+        <input class="form-control" type="text" id="FirstName" [(ngModel)]="intervenant.nom" name="FirstName" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >LastName</label>
+        <input class="form-control" type="text" id="LastName" [(ngModel)]="intervenant.prenom" name="LastName" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Sujet</label>
+        <input class="form-control" type="text" id="Sujet" [(ngModel)]="intervenant.sujet" name="Sujet" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Numero Telephone</label>
+        <input class="form-control" type="number" id="numtel" [(ngModel)]="intervenant.numtel" name="numtel" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Email</label>
+        <input class="form-control" type="email" id="email" [(ngModel)]="intervenant.email" name="email" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Confirmation</label>
+        <input type="checkbox" id="confirmation" [(ngModel)]="intervenant.confirmation" name="confirmation" >
+    </div>
+    <button class="btn btn-primary" type="submit">Update Intervenant</button>
+</form>

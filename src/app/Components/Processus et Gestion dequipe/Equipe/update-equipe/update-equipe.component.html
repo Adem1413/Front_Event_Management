@@ -1,0 +1,31 @@
+<h3>Update Equipe</h3>
+<form class="form" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3" >
+        <label class="form-label" >Nom</label>
+        <input class="form-control" type="text" id="FirstName" [(ngModel)]="equipe.nom" name="FirstName" >
+    </div>
+
+    <div  class="mb-3" >
+        <label  class="form-label">Comité</label>
+        <br>
+        <label class="form-label">
+            <input [(ngModel)]="equipe.comite"  type="radio"  value="Logistique" id="log" name="log">
+            Logistique
+          </label>  <br>
+          
+          <label class="form-label">
+            <input [(ngModel)]="equipe.comite"  type="radio"  value="Sponsoring" id="spon" name="spon">
+            Sponsoring
+          </label> <br>
+          
+          <label class="form-label">
+            <input [(ngModel)]="equipe.comite"  type="radio"  value="Media" id="media" name="media">
+           Media
+          </label> <br>
+    </div>
+
+   
+
+    <button class="btn btn-primary" type="submit">Update Equipe</button>
+</form>

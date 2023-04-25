@@ -1,0 +1,37 @@
+<h3>Create Pack</h3>
+<form class="form"  (ngSubmit)="onSubmit()">
+
+    <div class="mb-3" >
+        <label class="form-label" >Nom d'Entreprose</label>
+        <input class="form-control" type="text" id="name" [(ngModel)]="pack.nom" name="name" >
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" >Pack Type</label>
+        <br>
+        <label class="form-label"  >
+            <input id="gold" type="radio" value="gold"  [(ngModel)]="pack.packtype" name="packtype"/>
+            Gold
+        </label>
+        <br />
+        <label class="form-label"  >
+            <input id="silver" type="radio" value="silver"  [(ngModel)]="pack.packtype" name="packtype"/>
+            Silver
+        </label>
+        <br />
+        <label class="form-label"  >
+            <input id="bronze" type="radio" value="bronze"  [(ngModel)]="pack.packtype" name="packtype"/>
+            Bronze
+        </label>
+        <br />
+    </div>
+    
+
+    <div class="mb-3" >
+        <label class="form-label" >Montant</label>
+        <input class="form-control" type="number" id="montant" [(ngModel)]="pack.montant" name="montant" >
+    </div>
+
+   
+    <button class="btn btn-primary" type="submit">Create Pack</button>
+</form>

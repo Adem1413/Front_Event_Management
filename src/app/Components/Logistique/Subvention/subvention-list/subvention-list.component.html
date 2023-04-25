@@ -1,0 +1,36 @@
+<h2>Subvention List</h2>
+<table class="table" >
+
+<thead>
+<tr>
+    <th>Article</th>
+    <th>Société</th>
+    <th>Email</th>
+    <th>Numero Telephone</th>
+</tr>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let subvention of subventions" >
+        <td>{{subvention.article}}</td>
+        <td>{{subvention.societe}}</td>
+        <td>{{subvention.email}}</td>
+        <td>{{subvention.numtel}}</td>
+        <td>
+        <button class="btn btn-success" (click)="updateSubvention(subvention.id)">Update Subvention</button>
+    </td>
+        <td>
+        <button class="btn btn-danger" (click)="deleteSubvention(subvention.id)">Delete Subvention</button>
+    </td>
+    </tr>
+</tbody>
+
+</table>
+
+<button style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" class="btn btn-primary" (click)="goToAddSubvention()"  routerLink="create-subvention"> 
+    Add Subvention
+  </button>
+
+
+

@@ -1,0 +1,111 @@
+<form class="form" [formGroup]="equipeForm" (ngSubmit)="onSubmit()">
+  <p>
+    <label class="form-label" for="name">Name:</label>
+    <input
+      class="form-control"
+      type="text"
+      id="nom"
+      name="nom"
+      formControlName="nom"
+    />
+  </p>
+  <div class="mb-3">
+    <label class="form-label" for="comite" >Comité</label>
+    <br />
+    <label class="form-label" for="comite" class="form-label">
+      <input type="radio" value="Logistique" formControlName="comite" />
+      Logistique
+    </label>
+    <br />
+
+    <label class="form-label" for="comite" >
+      <input type="radio" value="Sponsoring" formControlName="comite" />
+      Sponsoring
+    </label>
+    <br />
+
+    <label class="form-label" for="comite" >
+      <input type="radio" value="Media" formControlName="comite" />
+      Media
+    </label>
+    <br />
+  </div>
+  <div formArrayName="ocs">
+    <div *ngFor="let oc of ocs.controls; let i = index">
+      <div [formGroupName]="i">
+         <label style="font-size: 20px; font-weight: 500;margin-left: 250px;" > Oc N° {{ i+1 }} </label>
+        <p>
+          <label class="form-label" for="nom">Nom:</label>
+          <input
+            class="form-control"
+            type="text"
+            id="nom"
+            name="nom"
+            formControlName="nom"
+          />
+        </p>
+        <p>
+          <label class="form-label" for="prenom">Prenom:</label>
+          <input
+            class="form-control"
+            type="text"
+            id="prenom"
+            name="prenom"
+            formControlName="prenom"
+          />
+        </p>
+        <p>
+          <label class="form-label" for="niveau">Niveau:</label>
+          <input
+            class="form-control"
+            type="text"
+            id="niveau"
+            name="niveau"
+            formControlName="niveau"
+          />
+        </p>
+        <p>
+          <label class="form-label" for="specialite">Specialite:</label>
+          <input
+            class="form-control"
+            type="text"
+            id="specialite"
+            name="specialite"
+            formControlName="specialite"
+          />
+        </p>
+        <p>
+          <label class="form-label" for="numtel">Numéro de Téléphone:</label>
+          <input
+            class="form-control"
+            type="text"
+            id="numtel"
+            name="numtel"
+            formControlName="numtel"
+          />
+        </p>
+
+        <div class="deletebutton">
+          <button
+          style="width: 150px; "
+            class="btn btn-danger"
+            type="button"
+            (click)="ocs.removeAt(i)"
+          >
+            Remove
+          </button>
+        </div>
+        <button style="width: 250px; margin-bottom: 20px; margin-left: 170px;" class="btn btn-success" type="button" (click)="addOcs()">
+          Add Oc
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+   
+ 
+  <div>
+    <button style="width: 150px;margin-top: 20px;margin-left: 220px;margin-bottom: 50px;" class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>

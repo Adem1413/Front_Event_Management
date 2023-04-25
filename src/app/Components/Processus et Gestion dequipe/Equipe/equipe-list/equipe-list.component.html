@@ -1,0 +1,31 @@
+<h2>Equipe List</h2>
+<table class="table">
+
+<thead>
+<tr>
+    <th>Nom</th>
+    <th>Comité</th>
+    <th>List Ocs</th>
+    
+   
+</tr>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let equipe of equipes" >
+        <td>{{equipe.nom}}</td>
+        <td>{{equipe.comite}}</td>
+        <td *ngFor="let oc of equipe.ocs">
+            {{ oc.nom }} {{ oc.prenom }} {{ oc.niveau }} {{ oc.specialite }} {{ oc.numtel }}
+        </td>
+        
+        <td>
+        <button class="btn btn-success" (click)="updateEquipe(equipe.id)">Update Equipe</button></td><td>
+        <button class="btn btn-danger" (click)="deleteEquipe(equipe.id)">Delete Equipe</button>
+    </td>
+    </tr>
+</tbody>
+
+</table>
+<button style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" class="btn btn-primary"  (click)="goToAddEquipe()" routerLink="create-equipe">Add Equipe</button>

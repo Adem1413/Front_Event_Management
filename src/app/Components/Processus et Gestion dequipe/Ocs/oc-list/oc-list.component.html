@@ -1,0 +1,32 @@
+<h2>Oc List</h2>
+<table class="table" >
+
+<thead>
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>niveau</th>
+    <th>specialite</th>
+    <th>numtel</th>
+</tr>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let oc of ocs" >
+        <td>{{oc.nom}}</td>
+        <td>{{oc.prenom}}</td>
+        <td>{{oc.niveau}}</td>
+        <td>{{oc.specialite}}</td>
+        <td>{{oc.numtel}}</td>
+        <td>
+        <button class="btn btn-success" (click)="updateOc(oc.id)">Update Oc</button>
+        </td>
+        <td>
+        <button class="btn btn-danger" (click)="deleteOc(oc.id)">Delete Oc</button>
+    </td>
+    </tr>
+</tbody>
+
+</table>
+<button style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" class="btn btn-primary" (click)="goToAddOc()"  routerLink="create-oc">Add Oc</button>

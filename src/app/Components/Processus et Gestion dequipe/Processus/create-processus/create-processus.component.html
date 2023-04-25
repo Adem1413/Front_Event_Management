@@ -1,0 +1,42 @@
+<h3>Create Processus</h3>
+<form class="form" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label  class="form-label">Nom</label>
+        <input  class="form-control" type="text" id="nom" [(ngModel)]="processus.nom" name="nom" >
+    </div>
+
+    
+
+    <div>
+        <label  class="form-label">Besoin Logistique</label>
+        <input  class="form-control" type="text" id="besoinlog" [(ngModel)]="processus.besoinlog" name="besoinlog" >
+    </div>
+
+    <div>
+        <label  class="form-label">Besoin OC</label>
+        <input  class="form-control" type="number" id="besoinoc" [(ngModel)]="processus.besoinOC" name="besoinoc" >
+    </div>
+
+    <div>
+        <label  class="form-label">Duree par Jour</label>
+        <input  class="form-control" type="number" id="dureej" [(ngModel)]="processus.dureeJ" name="dureej" >
+    </div>
+
+    <div>
+        <label  class="form-label">Debut</label>
+        <input  class="form-control" type="number" id="debut" [(ngModel)]="processus.debut" name="debut" >
+    </div>
+
+    <div>
+        <label  class="form-label">Fin</label>
+        <input  class="form-control" type="number" id="fin" [(ngModel)]="processus.fin" name="fin" >
+    </div>
+    <div>
+        <label>Finalité</label>
+        <input  class="form-control" type="text" id="Finalité" [(ngModel)]="processus.finalite" name="Finalité" >
+    </div>
+
+    
+    <button style="margin-bottom: 50px ;margin-top: 20px" class="btn btn-primary" type="submit">Create Processus</button>
+</form>

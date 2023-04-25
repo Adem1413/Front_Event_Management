@@ -1,0 +1,26 @@
+<h2>Tache List</h2>
+<table class="table"  >
+
+<thead>
+<tr>
+    <th>Taches</th>
+    <th>Oc Name</th>
+    
+</tr>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let tache of taches" >
+        <td>{{tache.tache}}</td>
+        <td>{{tache.nomOc}}</td>
+        
+        <td>
+        <button class="btn btn-success" (click)="updateTache(tache.id)">Update Tache</button>
+    </td>  <td> <button class="btn btn-danger" (click)="deleteTache(tache.id)">Delete Tache</button>
+    </td>
+    </tr>
+</tbody>
+
+</table>
+<button style=" width: 500px; margin-left: 500px;margin-top: 20px;margin-bottom: 50px;" (click)="goToAddTache()" class="btn btn-primary" routerLink="create-tache" >Add Tache</button>
